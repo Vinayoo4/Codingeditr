@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --editor-bg: theme('colors.white');
+    --editor-fg: theme('colors.gray.900');
+  }
+
+  .dark {
+    --editor-bg: theme('colors.gray.900');
+    --editor-fg: theme('colors.gray.100');
+  }
+}
+
+.gutter {
+  background-color: theme('colors.gray.200');
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.dark .gutter {
+  background-color: theme('colors.gray.700');
+}
+
+.gutter:hover {
+  background-color: theme('colors.amber.500');
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+}
+
+.gutter.gutter-vertical {
+  cursor: row-resize;
+}
